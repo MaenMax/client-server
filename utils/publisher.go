@@ -10,7 +10,7 @@ import (
 var (
 	message      = flag.String("msg", "", "Data to be published to the queue service")
 	NatsServers  = []string{"http://127.0.0.1:4222", "http://127.0.0.1:5222", "http://127.0.0.1:6222"}
-	QueueSubject = "bloxroute"
+	QueueSubject = "queue_sub"
 	err          error
 )
 

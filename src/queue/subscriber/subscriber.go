@@ -11,7 +11,7 @@ import (
 
 var (
 	NatsServers  = []string{"http://127.0.0.1:4222", "http://127.0.0.1:5222", "http://127.0.0.1:6222"}
-	QueueSubject = "bloxroute"
+	QueueSubject = "queue_sub"
 	err          error
 	RecvChan     = make(chan *nats.Msg, 64)
 )

@@ -12,6 +12,11 @@ Compilation:
  - Run the Makefile using Linux command:  $ make
  from the home directory of the git repo
 
+- To deploy the server (create tar.bz2 archive), run $ make deploy
+
+- To clear generated binaries/archives from project, run $ make clean
+
+
 Running the server:
 
 From the home directory, execute:
@@ -39,3 +44,6 @@ Example of getting an item:
 
 Example of getting all items:
 ./bin/publisher -msg '{"client_id":"1","item": {"id": "1"},"request_type":4}':
+
+
+NOTE: Generated logs exist in log/server.log file.
