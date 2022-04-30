@@ -3,7 +3,7 @@ package main
 import (
 	queue2 "client-server/src/queue"
 	"client-server/src/queue/subscriber"
-	l4g "git.kaiostech.com/cloud/thirdparty/code.google.com/p/log4go"
+	l4g "github.com/alecthomas/log4go"
 )
 
 var (

@@ -3,8 +3,8 @@ package subscriber
 import (
 	queue2 "client-server/src/queue"
 	"encoding/json"
-	l4g "git.kaiostech.com/cloud/thirdparty/code.google.com/p/log4go"
-	"git.kaiostech.com/cloud/thirdparty/github.com/pkg/errors"
+	"errors"
+	l4g "github.com/alecthomas/log4go"
 	nats "github.com/nats-io/nats.go"
 	"strings"
 )

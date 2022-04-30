@@ -1,6 +1,6 @@
 package queue
 
-import l4g "git.kaiostech.com/cloud/thirdparty/code.google.com/p/log4go"
+import l4g "github.com/alecthomas/log4go"
 
 type RequestType int // 1:AddItem  2:RemoveItem 3:GetItem 4:GetAllItems
 

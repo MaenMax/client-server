@@ -16,9 +16,13 @@ bin/publisher:  utils/publisher.go
 
 
 clean:
-	@echo "Deleting generated binary files ..."; sh -c 'if [ -d bin ];  then  find bin/ -type f -exec rm {} \; -print ; fi; rm -Rf bin/*'
+	@echo "Deleting generated binary files ..."; sh -c 'if [ -d bin ];  then  find bin/ -type f -exec rm {} \; -print ; fi; rm -Rf bin/*;rm -rf ./*.tar.bz2'
 
 
 clear_cache:
 	@echo "Deleting local caches ..."; 
 	@if [ -d ~/go ]; then find ~/go -type d -exec chmod 755 {} \; && rm -Rf ~/go; fi
+
+deploy:
+	@echo "Deploying server..."; 
+	bash -c 'mkdir -p client-server && mkdir -p client-server/bin && cp -a bin client-server && cp -a conf client-server && mkdir -p client-server/log && tar -jcvf client-server.tar.bz2 client-server'
